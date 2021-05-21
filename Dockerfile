@@ -4,7 +4,7 @@ FROM tlinnet/csharp-notebook
 #Working Directory
 WORKDIR $HOME
 
-ARG NB_USER=cybercoder
+ARG NB_USER=jovyan
 ARG NB_UID=1000
 ENV USER ${NB_USER}
 ENV NB_UID ${NB_UID}
