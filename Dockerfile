@@ -35,7 +35,7 @@ RUN chown -R ${NB_UID} ${HOME}
 USER ${USER}
 
 RUN chmod 644 ${HOME}/start-jupyternotebook.sh
-
+RUN echo \{\"theme\": \"JupyterLab Dark\"\} > ~/.jupyter/lab/user-settings
 #Install nteract 
 RUN pip install nteract_on_jupyter
 
@@ -52,5 +52,4 @@ ENV DOTNET_TRY_CLI_TELEMETRY_OPTOUT=false
 WORKDIR ${HOME}/
 
 RUN rm packages-microsoft-prod.deb
-
-
+RUN rm -rf 
