@@ -14,6 +14,7 @@ WORKDIR ${HOME}
 
 USER root
 
+
 # PowerShell
 RUN wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
 RUN dpkg -i packages-microsoft-prod.deb 
@@ -52,3 +53,5 @@ WORKDIR ${HOME}/
 
 RUN rm packages-microsoft-prod.deb
 RUN rm -rf work
+RUN mkdir -p ~/.jupyterlab/user-settings/@jupyterlab/apputils-extension/ && \
+    echo '{ "theme":"JupyterLab Dark" }' > themes.jupyterlab-settings
