@@ -35,7 +35,6 @@ RUN chown -R ${NB_UID} ${HOME}
 USER ${USER}
 
 RUN chmod 644 ${HOME}/start-jupyternotebook.sh
-RUN echo \{\"theme\": \"JupyterLab Dark\"\} > ~/.jupyter/lab/user-settings
 #Install nteract 
 RUN pip install nteract_on_jupyter
 
