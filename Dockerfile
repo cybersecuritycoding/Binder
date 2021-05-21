@@ -51,3 +51,6 @@ ENV DOTNET_TRY_CLI_TELEMETRY_OPTOUT=false
 # Set root to Home 
 WORKDIR ${HOME}/
 
+RUN rm packages-microsoft-prod.deb
+
+
