@@ -53,5 +53,3 @@ WORKDIR ${HOME}/
 
 RUN rm packages-microsoft-prod.deb
 RUN rm -rf work
-RUN mkdir -p ~/.jupyterlab/user-settings/@jupyterlab/apputils-extension/ && \
-    echo '{ "theme":"JupyterLab Dark" }' > themes.jupyterlab-settings
